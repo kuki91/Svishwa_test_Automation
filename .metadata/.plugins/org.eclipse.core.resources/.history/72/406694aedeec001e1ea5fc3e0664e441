@@ -1,0 +1,30 @@
+package Page_PF;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.support.ui.Select;
+
+public class Registration_form {
+	
+	WebDriver driver;
+	
+	@FindBy(id = "cutitel")
+	WebElement txt_title;
+	
+	Registration_form(WebDriver driver){
+		
+		this.driver = driver;
+		AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver,30);
+		PageFactory.initElements(factory, this);
+	}
+	
+	public void select_title(String title) {
+		
+		Select Title = new Select(txt_title);
+		Title.selectByValue(title);
+	}
+
+}

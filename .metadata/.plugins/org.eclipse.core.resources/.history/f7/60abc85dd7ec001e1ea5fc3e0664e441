@@ -1,0 +1,23 @@
+package stepDefinition;
+
+import io.cucumber.java.Before;
+import io.cucumber.java.en.*;
+
+public class dropDown_registration {
+
+	@Before
+	public void browser_Steup() {
+		
+	}
+	@Given("user is on registration page")
+	public void user_is_on_registration_page() {
+	}
+
+	@When("^user is select (.*) and (.*) and (.*)$")
+	public void user_is_select_mrs_and_colombo_and_homagama() {
+	}
+
+	@Then("The values are selected correctly")
+	public void the_values_are_selected_correctly() {
+	}
+}
